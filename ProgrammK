@@ -1,0 +1,56 @@
+program Project1;
+uses crt;
+var i, t, n, j, f:integer;
+g:array [0..100] of integer;
+r :char;
+begin
+  r:='y';
+  while r='y' do
+  begin
+ writeln('Введите колличество элементов');
+ readln(n);
+ for i:=0 to n-1 do
+  begin
+   write('Введите элемент ', i, ': ');
+   readln(g[i]);
+  end;
+
+ clrscr;
+ writeln('Исходный массив:');
+ for i:=0 to n-1 do
+  begin
+   write(g[i],' ');
+  end;
+    writeln;
+ for i:=1 to n-1 do
+  begin
+f:=0;
+   for j:=0 to n-i-1 do
+    begin
+     if (g[j]>g[j+1]) then
+      begin
+       t:=g[j];
+       g[j]:=g[j+1];
+       g[j+1]:=t;
+       f:=f+1;
+      end;
+
+    end;
+    write(i,': ');
+     for j:=0 to n-1 do
+      begin
+        write(g[j],' ');
+      end;
+     writeln;
+    if f=0 then break;
+  end;
+
+write('Готовый массив: ');
+for i:=0 to n-1 do
+begin
+write(g[i],' ');
+end;
+writeln('Ещё раз?');
+readln(r);
+end;
+end.
