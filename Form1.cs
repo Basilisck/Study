@@ -19,18 +19,19 @@ namespace _3
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            int n;
+            int i, n, b=0;
             n = Convert.ToInt32(textBox1.Text);
             for (i=0;i<n;i++)
             {
-                int a;
-                a = n % 10;
-                if (a==3)
+                int a = n % 10;
+                n = n/10;
+                if (a == 3)
                 {
-                    int b=0;
-                    b = b + a;
+                    b++;
                 }
             }
+            string z = Convert.ToString(b);
+            MessageBox.Show(z);
         }
     }
 }
