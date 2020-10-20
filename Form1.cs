@@ -21,7 +21,7 @@ namespace _3
         {
             int i, n, b=0;
             n = Convert.ToInt32(textBox1.Text);
-            for (i=0;i<n;i++)
+            while (n != 0)
             {
                 int a = n % 10;
                 n = n/10;
