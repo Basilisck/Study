@@ -53,4 +53,5 @@ end;
 writeln('…éñ à §?');
 readln(r);
 end;
+readln();
 end.
